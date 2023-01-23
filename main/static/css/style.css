@@ -1,0 +1,78 @@
+.myclasses{
+     /*max-width: 1600px;*/
+     margin-left: 30px;
+     padding-right: 100px;
+     /*margin-top: 30px;*/
+}
+
+#button,
+.container{
+     margin-left: 20px;
+}
+
+.table-bordered{
+     margin-bottom: 50px;
+     background-color: #ddffdd;
+}
+
+.ui-corner-all,
+.ui-widget-header,
+#ui-datepicker-div,
+#datepicker,
+.ui-datepicker-title,
+.ui-datepicker-calendar {
+    background: #417690;
+    color: #f6f6f6;
+    /*background-color: #5cb85c !important;*/
+}
+
+.ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all {
+    background: #417690 !important;
+    color: #f6f6f6 !important;
+    /*background-color: #5cb85c !important;*/
+}
+
+.datapicker {
+    background: #417690;
+    color: #f6f6f6;
+    width: 150px;
+}
+
+#status,
+#period,
+#positions,
+#type_report {
+    height: 25px;
+    margin-right: 20px;
+    padding-top: 0px;
+    padding-button: 0px;
+    border-bottom-width: 0px;
+    /*border-right-width: 25px;*/
+    border-top-width: 0px;
+}
+
+#period,
+#status{
+    margin-left: 10px;
+}
+
+
+
+#datepicker {
+    margin-right: 15px;
+}
+#datepicker2 {
+    margin-right: 20px;
+}
+
+.color_blue {
+    background-color: #c4dce8;
+}
+
+.dropdown {
+    margin-right: 10px;
+}
+
+#cabinet {
+    color: #003366;
+}

@@ -1,0 +1,64 @@
+{#{% extends 'base.html' %}#}
+{% load static %}
+{% load i18n %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Путевой лист</title>
+
+</head>
+<body>
+<form method="get">
+            <p>
+                <label for="period">Выберите период:</label>
+                <select id="period" name="period">
+                    <option value="1">17:30 - 08:30</option>
+                    <option value="2">08:30 - 17:30</option>
+                </select>
+            <input type="submit" value="Сформировать" />
+            </p>
+        </form>
+{% csrf_token %}
+ {% for driver, rows in data.items %}
+
+  <h4>Путевой лист для водителя: {{ driver }} {{ period_str }}</h4>
+<div class="table-wrap">
+<table class="table-1">
+    <tr>
+     {% for column in data.columns %}
+     <th>{{ column }}</th>
+{% endfor %}
+</tr>
+
+  {% for row in rows %}
+
+  <tr>
+    <td>{{ row.num }}</td>
+    <td>{{ row.date_dev }}</td>
+    <td>{{ row.district }}</td>
+    <td>{{ row.address }}</td>
+    <td>{{ row.phone_number }}</td>
+    <td>{{ row.position }}</td>
+    <td>{{ row.quantity }}</td>
+    <td>{{ row.amount }}</td>
+    <td>{{ row.comment }}</td>
+  </tr>
+     {% empty %}
+     <tr>
+    <td>Данных пока нет...</td>
+     </tr>
+  {% endfor %}
+
+</table>
+  {% endfor %}
+</div>
+
+{#<script register.js?{random} src="{% static 'documents/js/report.js' %}">#}
+{##}
+{##}
+{#</script>#}
+<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+</body>
+</html>
